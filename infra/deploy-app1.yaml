@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: flux-app1-nginx
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
