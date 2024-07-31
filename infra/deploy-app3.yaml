@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: klient-deployment
+  name: webapi-deployment
   namespace: ns-app1
 spec:
   replicas: 2
