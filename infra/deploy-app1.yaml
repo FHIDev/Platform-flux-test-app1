@@ -34,3 +34,22 @@ spec:
 
 ---
 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-app1-nginx
+  namespace: ns-app1
+spec:
+  ingressClassName: webapprouting.kubernetes.azure.com
+  rules:
+  - host: app1.k8s.fhi-api.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: service-app1-nginx
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
