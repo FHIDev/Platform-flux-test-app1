@@ -28,7 +28,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: klient-service
-  namespace: fhi-komponenter
+  namespace: ns-app1
 spec:
   type: LoadBalancer
   selector:
