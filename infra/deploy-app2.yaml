@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: klient-deployment
+  namespace: ns-app1
+spec: 
+  replicas: 2  
+  selector:
+    matchLabels:
+      app: klient
+  template:
+    metadata:
+      labels:
+        app: klient
+    spec:
+      imagePullSecrets:
+      - name: myregistrykey
+      containers:
+      - name: klient-container
+        image: acrvmwarepoc01.azurecr.io/klient:latest
+        ports:
+        - containerPort: 8080        
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: AKS     
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: klient-service
+  namespace: fhi-komponenter
+spec:
+  type: LoadBalancer
+  selector:
+    app: klient
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
