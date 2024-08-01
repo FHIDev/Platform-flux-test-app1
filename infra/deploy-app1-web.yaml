@@ -39,6 +39,8 @@ kind: Ingress
 metadata:
   name: ingress-app1-web
   namespace: ns-app1
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
