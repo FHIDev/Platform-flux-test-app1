@@ -6,16 +6,16 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: flux-app1-nginx
-  replicas: 6
+      app: flux-app1-web
+  replicas: 1
   template:
     metadata:
       labels:
-        app: flux-app1-nginx
+        app: flux-app1-web
     spec:
       containers:
-      - name: flux-app1-nginx
-        image: nginx:1.14.2
+      - name: flux-app1-wb
+        image: yeasy/simple-web:latest
         ports:
         - containerPort: 80
 ---
@@ -23,21 +23,21 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-app1-nginx
+  name: service-app1-web
   namespace: ns-app1
 spec:
   type: ClusterIP
   ports:
   - port: 80
   selector:
-    app: flux-app1-nginx
+    app: flux-app1-web
 
 ---
 
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-app1-nginx
+  name: ingress-app1-web
   namespace: ns-app1
 spec:
 #  ingressClassName: webapprouting.kubernetes.azure.com
@@ -47,7 +47,7 @@ spec:
       paths:
       - backend:
           service:
-            name: service-app1-nginx
+            name: service-app1-web
             port:
               number: 80
         path: /
