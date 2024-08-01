@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: flux-app1-web-container
-        image: yeasy/simple-web:latest
+        image: wbitt/network-multitool
         ports:
         - containerPort: 80
 ---
