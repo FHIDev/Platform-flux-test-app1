@@ -17,7 +17,7 @@ spec:
       - name: myregistrykey
       containers:
       - name: webapi-container
-        image: acrvmwarepoc01.azurecr.io/server:latest
+        image: acrvmwarepoc01.azurecr.io/fhi.platform.server:latest
         ports:
         - containerPort: 8080        
         env:

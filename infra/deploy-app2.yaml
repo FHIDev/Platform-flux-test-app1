@@ -17,7 +17,7 @@ spec:
       - name: myregistrykey
       containers:
       - name: klient-container
-        image: acrvmwarepoc01.azurecr.io/klient:latest
+        image: acrvmwarepoc01.azurecr.io/fhi.platform.klient:latest
         ports:
         - containerPort: 8080        
         env:
