@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: sindre-troubleshoot-container
-        image: wbitt/Network-Multitool
+        image: wbitt/network-multitool
         ports:
         - containerPort: 80
