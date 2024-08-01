@@ -53,8 +53,6 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-    http:
-      paths:
       - path: /static/
       - backend:
           service:
