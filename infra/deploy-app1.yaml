@@ -40,7 +40,7 @@ metadata:
   name: ingress-app1-web
   namespace: ns-app1
 spec:
-#  ingressClassName: webapprouting.kubernetes.azure.com
+  ingressClassName: nginx
   rules:
   - host: app1.k8s.fhi-api.com
     http:
