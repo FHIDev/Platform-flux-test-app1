@@ -46,7 +46,7 @@ spec:
     http:
       paths:
       - path: /
-      - backend:
+        backend:
           service:
             name: service-app1-web
             port:
@@ -54,7 +54,7 @@ spec:
         path: /
         pathType: Prefix
       - path: /static/
-      - backend:
+        backend:
           service:
             name: service-app1-static
             port:
