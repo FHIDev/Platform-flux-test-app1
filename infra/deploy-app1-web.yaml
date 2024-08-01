@@ -46,20 +46,20 @@ spec:
     http:
       paths:
       - path: /*
+        pathType: Prefix
         backend:
           service:
             name: service-app1-web
             port:
               number: 80
-          path: /
-          pathType: Prefix
       - path: /static/*
+        pathType: Prefix
         backend:
           service:
             name: service-app1-static
             port:
               number: 80
-          path: /
-          pathType: Prefix
+
+          
 
 
