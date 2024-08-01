@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: flux-app1-web-container
-        image: yeasy/simple-web:latest
+        image: nginx:1.14.2
         ports:
         - containerPort: 80
 ---
