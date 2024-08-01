@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flux-app1-deployment-take-two
+  name: deployment.app1.web.1
   namespace: ns-app1
 spec:
   selector:
