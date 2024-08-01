@@ -45,6 +45,7 @@ spec:
   - host: app1.k8s.fhi-api.com
     http:
       paths:
+      - path: /
       - backend:
           service:
             name: service-app1-web
@@ -52,4 +53,15 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+    http:
+      paths:
+      - path: /static/
+      - backend:
+          service:
+            name: service-app1-static
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+
 
