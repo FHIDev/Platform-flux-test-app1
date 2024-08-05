@@ -41,6 +41,7 @@ metadata:
   namespace: ns-app1
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: fhi-k8s-letsencrypt-azuredns-issuer
 spec:
   ingressClassName: nginx
   rules:
