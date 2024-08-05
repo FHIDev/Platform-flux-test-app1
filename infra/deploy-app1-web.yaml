@@ -44,7 +44,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: app1.k8s.fhi-api.com
+  - host: sindre-app1.fhi-k8s.com
     http:
       paths:
       - path: /
@@ -61,7 +61,10 @@ spec:
             name: service-app1-static
             port:
               number: 80
-
+  tls:
+    - hosts:
+        - sindre-app1.fhi-k8s.com
+      secretName: tls-app1  
           
 
 
