@@ -64,7 +64,7 @@ spec:
   tls:
     - hosts:
         - sindre-app1.fhi-k8s.com
-      secretName: tls-app1  
+      secretName: tls-app1
           
 
 
