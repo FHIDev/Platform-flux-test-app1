@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sindre-test-container
-        image: tutum/hello-world
+        image: paulbouwer/hello-kubernetes:1.10
         ports:
         - containerPort: 80
 ---
