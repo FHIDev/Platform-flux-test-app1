@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: sindre-test-container
-        image: docker/doodle
+        image: tutum/hello-world
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
