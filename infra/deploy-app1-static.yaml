@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: flux-app1-web-container
-        image: wbitt/network-multitool
+        image: wbitt/network-multitool-feilstaving
         ports:
         - containerPort: 80
 ---
