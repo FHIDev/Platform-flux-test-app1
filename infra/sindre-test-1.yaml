@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-sindre-troubleshoot
+  name: deployment-sindre-test
   namespace: ns-app1
 spec:
   selector:
     matchLabels:
-      app: sindre-troubleshoot
+      app: sindre-test
   replicas: 1
   template:
     metadata:
       labels:
-        app: sindre-troubleshoot
+        app: sindre-test
     spec:
       containers:
-      - name: sindre-troubleshoot-container
+      - name: sindre-test-container
         image: wbitt/network-multitool
         ports:
         - containerPort: 80
@@ -22,36 +22,36 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-sindre-troubleshoot
+  name: service-sindre-test
   namespace: ns-app1
 spec:
   type: ClusterIP
   ports:
   - port: 80
   selector:
-    app: sindre-troubleshoot
+    app: sindre-test
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-sindre-troubleshoot
+  name: ingress-sindre-test
   namespace: ns-app1
   annotations:
     cert-manager.io/cluster-issuer: fhi-k8s-letsencrypt-azuredns-issuer
 spec:
   ingressClassName: nginx
   rules:
-  - host: sindre-troubleshoot.fhi-k8s.com
+  - host: sindre-test.fhi-k8s.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: service-sindre-troubleshoot
+            name: service-sindre-test
             port:
               number: 80
   tls:
     - hosts:
-        - sindre-troubleshoot.fhi-k8s.com
-      secretName: tls-troubleshoot
+        - sindre-test.fhi-k8s.com
+      secretName: tls-sindre-test
