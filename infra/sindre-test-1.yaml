@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: sindre-test-container
-        image: antoinebou12/retroarch-web-games
+        image: magicalyak/docker-games
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
 ---
 apiVersion: v1
 kind: Service
