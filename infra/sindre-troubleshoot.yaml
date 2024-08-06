@@ -24,6 +24,8 @@ kind: Service
 metadata:
   name: service-sindre-troubleshoot
   namespace: ns-app1
+  annotations:
+    cert-manager.io/cluster-issuer: fhi-k8s-letsencrypt-azuredns-issuer
 spec:
   type: ClusterIP
   ports:
