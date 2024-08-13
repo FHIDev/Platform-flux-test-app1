@@ -70,6 +70,7 @@ metadata:
   name: ingress-app1-web
   namespace: ns-app1
   annotations:
+    external-dns.alpha.kubernetes.io/target: 83.118.177.220
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: fhi-k8s-letsencrypt-azuredns-issuer
 spec:
