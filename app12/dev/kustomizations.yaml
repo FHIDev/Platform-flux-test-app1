@@ -6,3 +6,7 @@ nameSuffix: -dev
 namespace: ns-app12-dev
 commonLabels:
   app: app-app12-dev
+#images:
+#- name: nginx
+#  newName: my.image.registry/nginx
+#  newTag: 1.4.0
