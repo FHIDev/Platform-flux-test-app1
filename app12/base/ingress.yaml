@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-appnavn
+  namespace: ns-appnavn
+  annotations:
+    cert-manager.io/cluster-issuer: fhi-k8s-letsencrypt-azuredns-issuer
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: appnavn.fhi-k8s.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-appnavn
+            port:
+              number: 80
+  tls:
+    - hosts:
+        - appnavn.fhi-k8s.com
+      secretName: tls-appnavn
