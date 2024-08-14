@@ -4,6 +4,7 @@ metadata:
   name: ingress-appnavn
   namespace: ns-appnavn
   annotations:
+    #external-dns.alpha.kubernetes.io/target: 83.118.177.220
     cert-manager.io/cluster-issuer: fhi-k8s-letsencrypt-azuredns-issuer
 spec:
   ingressClassName: nginx
