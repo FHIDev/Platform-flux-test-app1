@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sindre-test-container
-        image: docker/doodle
+        image: nginxdemos/nginx-hello
         ports:
         - containerPort: 80
 ---
