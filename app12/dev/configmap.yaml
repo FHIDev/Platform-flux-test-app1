@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-app
+data:
+  app.config: |
+    environment=dev
+    mode=strict
+    sql-target=mysql.server.com
+  app.config2: |
+    color_scheme=dark
+    easter_egg=on

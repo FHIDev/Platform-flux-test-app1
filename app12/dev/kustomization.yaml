@@ -4,6 +4,7 @@ metadata:
   name: kustomize-app12-dev
 resources:
 - ../base
+- configmap.yaml
 nameSuffix: -dev
 namespace: ns-app12-dev
 commonLabels:
