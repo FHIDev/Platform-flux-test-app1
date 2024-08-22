@@ -32,10 +32,10 @@ spec:
         image: wbitt/network-multitool
         ports:
         - containerPort: 80
-#        volumeMounts:
-#        - name: volume-config-app1-test
-#          mountPath: /config/
-#    volumes:
-#    - name: "volume-config-app1-test"
-#      configMap:
+        volumeMounts:
+        - name: volume-config-app1-test
+          mountPath: "/fhi_config"
+    volumes:
+    - name: "volume-config-app1-test"
+      configMap: config-app1-test
 ---
