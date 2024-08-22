@@ -8,9 +8,9 @@ data:
     environment=dev
     mode=strict
     sql-target=mysql.server.com
-  #app.config2: |
-  #  color_scheme=dark
-  #  easter_egg=on
+  app.config2: |
+    color_scheme=dark
+    easter_egg=on
 ---
 apiVersion: apps/v1
 kind: Deployment
