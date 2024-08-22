@@ -18,10 +18,3 @@ spec:
         image: tutum/hello-world
         ports:
         - containerPort: 80
-#        volumeMounts:
-#        - name: volume-config-app
-#          mountPath: /fhi_config/
-#      volumes:
-#      - name: "volume-config-app"
-#        configMap:
-#          name: configmap-app-dev
