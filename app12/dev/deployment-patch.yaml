@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: appnavn-container
+        image: tutum/hello-world
+        volumeMounts:
+        - name: volume-config-app
+          mountPath: /fhi_config/
+      volumes:
+      - name: "volume-config-app"
+        configMap:
+          name: configmap-app-dev
