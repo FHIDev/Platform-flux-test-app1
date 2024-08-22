@@ -35,7 +35,7 @@ spec:
         volumeMounts:
         - name: volume-config-app1-test
           mountPath: "/fhi_config"
-    volumes:
-    - name: "volume-config-app1-test"
-      configMap: config-app1-test
+      volumes:
+      - name: "volume-config-app1-test"
+        configMap: config-app1-test
 ---
