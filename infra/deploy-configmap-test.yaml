@@ -15,20 +15,20 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-sindre-troubleshoot
+  name: deployment-sindre-configmaptest
   namespace: ns-app1
 spec:
   selector:
     matchLabels:
-      app: sindre-troubleshoot
+      app: sindre-configmaptest
   replicas: 1
   template:
     metadata:
       labels:
-        app: sindre-troubleshoot
+        app: sindre-configmaptest
     spec:
       containers:
-      - name: sindre-troubleshoot-container
+      - name: sindre-configmaptest-container
         image: wbitt/network-multitool
         ports:
         - containerPort: 80
