@@ -4,7 +4,7 @@ metadata:
   name: hpa-deployment-appnavn
   namespace: ns-appnavn
 spec:
-  minReplicas: 3
+  minReplicas: 2
   maxReplicas: 6
   metrics:
   - type: Resource
