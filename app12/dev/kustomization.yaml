@@ -15,3 +15,4 @@ commonLabels:
 #  newTag: 1.4.0
 patchesStrategicMerge:
   - deployment-patch.yaml
+  - hpa-patch.yaml
