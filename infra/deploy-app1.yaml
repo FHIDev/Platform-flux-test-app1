@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: flux-app1-web
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -40,7 +40,7 @@ spec:
   selector:
     matchLabels:
       app: flux-app1-static
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
