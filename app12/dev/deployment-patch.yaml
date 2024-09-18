@@ -19,8 +19,18 @@ spec:
         volumeMounts:
         - name: volume-config-app
           mountPath: /fhi_config/
+        - name: volume-akv-secret-1
+          mountpath: /fhi_secret/
       volumes:
       - name: "volume-config-app"
         configMap:
           name: configmap-app-dev
+      - name: "volume-akv-secret-1"
+        csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: "azure-kv-k8s-test-dev"
+            nodePublishSecretRef:
+              name: secret-azure-kv-k8s-test-dev
     replicas: 1
