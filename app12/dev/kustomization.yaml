@@ -5,6 +5,7 @@ metadata:
 resources:
 - ../base
 - configmap.yaml
+- akv-store.yaml
 nameSuffix: -dev
 namespace: ns-app12-dev
 commonLabels:
