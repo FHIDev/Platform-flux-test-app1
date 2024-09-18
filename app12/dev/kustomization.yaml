@@ -5,7 +5,6 @@ metadata:
 resources:
 - ../base
 - configmap.yaml
-- secret1.yaml
 nameSuffix: -dev
 namespace: ns-app12-dev
 commonLabels:
