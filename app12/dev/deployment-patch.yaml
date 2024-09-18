@@ -20,7 +20,7 @@ spec:
         - name: volume-config-app
           mountPath: /fhi_config/
         - name: volume-akv-secret-1
-          mountpath: /fhi_secret/
+          mountPath: /fhi_secret/
       volumes:
       - name: "volume-config-app"
         configMap:
