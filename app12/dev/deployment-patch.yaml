@@ -32,5 +32,5 @@ spec:
             volumeAttributes:
               secretProviderClass: "azure-kv-k8s-test-dev"
             nodePublishSecretRef:
-              name: secret-azure-kv-k8s-test-dev
+              name: secret-azure-kv-k8s-test-dev            # Secret name for service principal info
     replicas: 1
