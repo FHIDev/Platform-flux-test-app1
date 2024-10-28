@@ -5,7 +5,7 @@ metadata:
   namespace: ns-appnavn
 spec:
   minReplicas: 2
-  maxReplicas: 6
+  maxReplicas: 8
   metrics:
   - type: Resource
     resource:
