@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: mtls-service-appnavn
+  name: mtls-service-appnavn2
   namespace: ns-appnavn
 spec:
-  secretName: mtls-service-appnavn-dev
+  secretName: mtls-service-appnavn2-dev
   #additionalOutputFormats:
   #- type: CombinedPEM
   #- type: DER
