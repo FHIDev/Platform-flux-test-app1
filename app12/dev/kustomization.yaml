@@ -6,6 +6,7 @@ resources:
 - ../base
 - configmap.yaml
 - akv-store.yaml
+- mtls-certificate.yaml
 nameSuffix: -dev
 namespace: ns-app12-dev
 commonLabels:
