@@ -21,6 +21,8 @@ spec:
           mountPath: /fhi_config/
         - name: volume-akv-secret-1
           mountPath: /fhi_secret/
+        - name: volume-mtls
+          mountPath: /fhi_mtls/
       volumes:
       - name: "volume-config-app"
         configMap:
@@ -33,4 +35,6 @@ spec:
               secretProviderClass: "azure-kv-k8s-test-dev"
             nodePublishSecretRef:
               name: secret-azure-kv-k8s-test-dev            # Secret name for service principal info
-    replicas: 1
+      - name: "volume-mtls"
+        secret:
+          secretName: mtls-service-appnavn-dev
