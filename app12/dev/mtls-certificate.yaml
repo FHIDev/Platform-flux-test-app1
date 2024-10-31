@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: service-appnavn-dev.ns-appnavn.svc.cluster.local
+  name: mtls-service-appnavn-dev
   namespace: ns-appnavn
 spec:
   # Secret names are always required.
