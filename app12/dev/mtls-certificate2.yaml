@@ -31,5 +31,5 @@ spec:
     - localhost
 
   issuerRef:
-    name: cluster-selfsigned-issuer
+    name: cluster-selfsigned-ca-issuer
     kind: ClusterIssuer
