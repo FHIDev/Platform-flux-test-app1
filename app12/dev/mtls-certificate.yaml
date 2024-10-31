@@ -5,6 +5,9 @@ metadata:
   namespace: ns-appnavn
 spec:
   secretName: mtls-service-appnavn-dev
+  #additionalOutputFormats:
+  #- type: CombinedPEM
+  #- type: DER
 
   privateKey:
     algorithm: RSA
@@ -25,7 +28,7 @@ spec:
 
   dnsNames:
     - service-appnavn.ns-appnavn-dev.svc.cluster.local
-  #  - www.example.com
+    - localhost
 
   issuerRef:
     name: cluster-selfsigned-issuer
