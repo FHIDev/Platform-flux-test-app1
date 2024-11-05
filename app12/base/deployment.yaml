@@ -25,3 +25,16 @@ spec:
           requests:
             cpu: 200m
             memory: 128Mi
+        volumeMounts:
+          - mountPath: /etc/ssl/certs/
+            name: trust-bundle
+            readOnly: true
+      volumes:
+        - name: trust-bundle
+          configMap:
+            name: bundle-internal
+            defaultMode: 0644
+            optional: false
+            items:
+            - key: trust-bundle.pem
+              path: trust-bundle-pem
