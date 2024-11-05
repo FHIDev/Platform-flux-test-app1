@@ -5,6 +5,8 @@ metadata:
   namespace: ns-appnavn
 spec:
   secretName: mtls-service-appnavn3-dev
+ # duration: 5d
+ # renewBefore: 4d
   #additionalOutputFormats:
   #- type: CombinedPEM
   #- type: DER
