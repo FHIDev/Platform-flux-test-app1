@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app-tenant5-0
+  name: deployment-tenant5-0
+  namespace: ns-tenant5
+spec:
+  selector:
+    matchLabels:
+      app: app-tenant5-0
+  template:
+    metadata:
+      labels:
+        app: app-tenant5-0
+    spec:
+      containers:
+      - image: tutum/hello-world
+        name: ct-tenant5-0-0
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+          requests:
+            cpu: 200m
+            memory: 128Mi
+        volumeMounts:
+#        - mountPath: /fhi_config/
+#          name: volume-config-app
+        - mountPath: /fhi_secret/
+          name: volume-akv-secret-1
+#        - mountPath: /fhi_mtls/
+#          name: volume-mtls
+#        - mountPath: /etc/ssl/certs/
+#          name: trust-bundle
+#          readOnly: true
+      volumes:
+#      - configMap:
+#          name: configmap-app-dev
+#        name: volume-config-app
+      - csi:
+          driver: secrets-store.csi.k8s.io
+#          nodePublishSecretRef:
+#            name: xxx           # Service principal secret
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: akv-tenant5-mi
+        name: volume-akv-secret-1
+#      - name: volume-mtls
+#        secret:
+#          secretName: mtls-service-appnavn-dev
+#      - configMap:
+#          defaultMode: 420
+#          items:
+#          - key: trust-bundle.pem
+#            path: trust-bundle-pem
+#          name: bundle-internal
+#          optional: false
+#        name: trust-bundle
