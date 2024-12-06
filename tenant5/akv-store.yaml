@@ -8,7 +8,7 @@ spec:
   parameters:
     usePodIdentity: "false"               # [OPTIONAL] if not provided, will default to "false"
     useVMManagedIdentity: "true"         # [OPTIONAL available for version > 0.0.4] if not provided, will default to "false"
-#    userAssignedIdentityID: "392c9c59-e579-4dd1-bc9f-e0b7c1d29f60"   # [OPTIONAL available for version > 0.0.4] use the client id to specify which user assigned managed identity to use. If using a user assigned identity as the VM's managed identity, then specify the identity's client id. If empty, then defaults to use the system assigned identity on the VM
+    userAssignedIdentityID: "d4d71854-b796-41ee-ae41-3a5dcb011c6d"   # [OPTIONAL available for version > 0.0.4] use the client id to specify which user assigned managed identity to use. If using a user assigned identity as the VM's managed identity, then specify the identity's client id. If empty, then defaults to use the system assigned identity on the VM
 #    userAssignedIdentityID: "502bfbe1-c14e-4fc6-9319-53d34cfe295a"   # [OPTIONAL available for version > 0.0.4] use the client id to specify which user assigned managed identity to use. If using a user assigned identity as the VM's managed identity, then specify the identity's client id. If empty, then defaults to use the system assigned identity on the VM
 #    clientID: "502bfbe1-c14e-4fc6-9319-53d34cfe295a"                 # [OPTIONAL available for version > 1.1.0] client id of the Azure AD Application or managed identity to use for workload identity
     keyvaultName: "kv-k8s-test"           # the name of the KeyVault
