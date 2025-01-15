@@ -42,8 +42,8 @@ spec:
 #        name: volume-config-app
       - csi:
           driver: secrets-store.csi.k8s.io
-#          nodePublishSecretRef:
-#            name: xxx           # Service principal secret
+          nodePublishSecretRef:
+            name: secret-azure-kv-k8s-test           # Service principal secret
           readOnly: true
           volumeAttributes:
             secretProviderClass: akv-tenant5-mi
