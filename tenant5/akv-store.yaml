@@ -20,7 +20,7 @@ spec:
           objectName: k8s-test-secret
           objectType: secret              # object types: secret, key or cert. For Key Vault certificates, refer to https://azure.github.io/secrets-store-csi-driver-provider-azure/configurations/getting-certs-and-keys/ for the object type to use
           objectVersion: ""               # [OPTIONAL] object versions, default to latest if empty
-          objectAlias: "k8s-test-alias"
+          objectAlias: "k8s-test-alias.lol"
 #        - |
 #          objectName: key1
 #          objectAlias: ""                 # If provided then it has to be referenced in [secretObjects].[objectName] to sync with Kubernetes secrets 
