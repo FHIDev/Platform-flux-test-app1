@@ -4,3 +4,4 @@ resources:
 #  - managed-sql.yaml
   - akv-store.yaml
   - deployment.yaml
+  - pvc.yaml
