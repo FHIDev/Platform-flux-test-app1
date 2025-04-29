@@ -36,6 +36,8 @@ spec:
 #        - mountPath: /etc/ssl/certs/
 #          name: trust-bundle
 #          readOnly: true
+        - mountPath: /fhi_nfsvol/
+          name: volume-nfs-tenant5-1
       volumes:
 #      - configMap:
 #          name: configmap-app-dev
@@ -48,6 +50,9 @@ spec:
           volumeAttributes:
             secretProviderClass: akv-tenant5-mi
         name: volume-akv-secret-1
+      - name: volume-nfs-tenant5-1
+        persistentVolumeClaim:
+          claimName: pvc-tenant5-1
 #      - name: volume-mtls
 #        secret:
 #          secretName: mtls-service-appnavn-dev
